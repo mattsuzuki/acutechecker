@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultsSpan = document.getElementById('results');
     const totalSpan = document.getElementById('total');
 
-    const calculateResults = () => {
+    const calculateResults = (event) => {
+        event.preventDefault();  // Add this line to prevent form submission
+
         const onesValue = onesInput.value ? parseFloat(onesInput.value) * 1.2 / 8 : 0;
         const twosValue = twosInput.value ? parseFloat(twosInput.value) * 1.7 / 8 : 0;
         const threesValue = threesInput.value ? parseFloat(threesInput.value) * 2.2 / 8 : 0;
